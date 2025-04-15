@@ -1,0 +1,155 @@
+@charset "utf-8";
+
+/* header  */
+header {
+  background: #fff;
+  height: 102px;
+}
+
+.header_inner {
+  padding: 0;
+  display: block;
+  height: 100%;
+}
+
+.header_nav {
+  display: none;
+}
+
+.login_nav {
+  display: none;
+}
+
+.search_design {
+  display: none;
+}
+
+h1 {
+  top: 3%;
+  left: 13%;
+}
+
+/* design */
+main {
+  color: #7F5539;
+  max-width: 295px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+div {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0;
+  margin-bottom: 8px;
+}
+
+.confirm {
+  border-left: 1px solid #7F5539;
+  font-size: 12px;
+  color: #333;
+  padding-left: 4px;
+  height: 20px;
+}
+
+.expiry {
+  margin: 0;
+  display: flex;
+}
+
+.expiry input[type=text] {
+  width: 7%;
+}
+
+.expiry input[type=text]:last-of-type {
+  border: transparent;
+  width: 15%;
+}
+
+input[type=submit] {
+  background-color: #7F5539;
+  color: #fff;
+  padding: 16px 28px;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0;
+  margin-left: 15%;
+  margin-bottom: 5px;
+  margin-top: 40px;
+}
+
+.back {
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 80px;
+  text-decoration: underline #7F5539;
+}
+
+@media screen and (min-width:768px) {
+  main {
+    max-width: 300px;
+  }
+
+  h2 {
+    font-size: 32px;
+    margin-bottom: 80px;
+  }
+
+  .title,
+  main p,
+  input[type=text],
+  input[type=password] {
+    font-size: 24px;
+  }
+
+  input[type=text],
+  input[type=password] {
+    height: 32px;
+  }
+
+
+  .item {
+    margin-bottom: 40px;
+  }
+
+  .item:last-of-type {
+    margin-bottom: 80px;
+  }
+
+  .expiry input[type=text] {
+    width: 13%;
+    padding-right: 5px;
+  }
+
+  .expiry input[type=text]:last-of-type {
+    width: 23%;
+  }
+
+  input[type=submit] {
+    padding: 20px 60px;
+    font-size: 20px;
+    margin: 0;
+    margin-top: 40px;
+  }
+
+  .button {
+    width: 300px;
+  }
+
+  .back {
+    font-size: 16px;
+  }
+
+}

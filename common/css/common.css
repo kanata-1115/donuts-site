@@ -1,0 +1,407 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #7f5539;
+}
+
+/* 共通header領域↓ */
+
+header {
+  height: 127px;
+  background-color: #ede0d4;
+}
+
+.header_inner {
+  padding: 24px 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ハンバーガーメニュー↓ */
+
+.header_nav {
+  display: inline-block;
+}
+
+#hamburger_menu {
+  height: 20px;
+  width: 24px;
+  background-color: transparent;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+#hamburger_menu span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #7f5539;
+  transition: linear 400ms;
+}
+
+#hamburger_menu .top_change {
+  background-color: #fff;
+  transform: rotate(45deg);
+  transform-origin: left;
+  opacity: 0;
+}
+
+#hamburger_menu .center_change {
+  opacity: 0;
+}
+
+#hamburger_menu .bottom_change {
+  background-color: #fff;
+  transform: rotate(-45deg);
+  transform-origin: left;
+  opacity: 0;
+}
+
+/* ハンバーガーメニュー↑ */
+
+/* ドロワーメニュー↓ */
+.drawer_design {
+  height: 100vh;
+  padding: 12px;
+  width: 100%;
+  background-color: rgba(127, 85, 57, 0.75);
+  position: absolute;
+  top: 0;
+  left: -200%;
+  z-index: 20;
+  transition: all 500ms ease-in-out;
+}
+
+.drawer_design.drawer_open {
+  left: 0;
+}
+
+.drawer_inner_design {
+  display: flex;
+  justify-content: space-between;
+}
+
+.drawer_logo img {
+  height: 52px;
+}
+
+.drawer_close_button {
+  height: 20px;
+  width: 24px;
+  background-color: transparent;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 30;
+}
+
+.nav_menu li {
+  padding: 16px 12px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  border-bottom: 1px solid #fff;
+}
+
+.nav_menu li a {
+  display: block;
+}
+
+/* ドロワーメニュー↑ */
+
+h1 {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+h1 img {
+  height: 50px;
+}
+
+.login_nav {
+  text-align: center;
+  display: flex;
+  gap: 12px;
+}
+
+.login_nav a img {
+  height: 20px;
+  margin-bottom: 4px;
+}
+
+.login_nav a p {
+  font-size: 10px;
+}
+
+#search_area {
+  height: 37px;
+  padding: 0 12px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+.search_keyword {
+  padding: 0 2px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #7f5539;
+}
+
+.search_submit {
+  text-indent: -100%;
+  background-color: #d9d9d9;
+  background-image: url(../images/search-icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px;
+  border: 1px solid #7f5539;
+  border-right: 1px solid transparent;
+}
+
+/* 共通footer領域↓ */
+
+footer {
+  padding: 12px;
+  height: 310px;
+  background-color: #ede0d4;
+}
+
+#footer_nav {
+  color: #7f5539;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#footer_nav p {
+  margin-bottom: 20px;
+  padding: 4px 12px;
+  border-left: 2px solid #b392ac;
+}
+
+#sns_area {
+  width: 134px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#sns_area a img {
+  width: 32px;
+}
+
+#footer_logo_area {
+  text-align: right;
+}
+
+#footer_logo_area a img {
+  margin-top: 24px;
+  width: 72px;
+}
+
+small {
+  display: block;
+  margin-top: 24px;
+  text-align: center;
+  font-size: 8px;
+  color: #7f5539;
+}
+
+.in_cart {
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.in_cart:hover {
+  transform: translateY(2px); /* ↓ 下に沈む */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+}
+
+
+
+@media screen and (min-width:768px) {
+
+  /* 共通header領域↓ */
+
+  header {
+    height: 182px;
+  }
+
+  .header_inner {
+    height: 118px;
+    margin: 0 auto;
+    padding: 29px 12px;
+    width: 1200px;
+    max-width: 100%;
+  }
+
+  /* ハンバーガーメニュー↓ */
+
+  .header_nav {
+    display: inline-block;
+  }
+
+  #hamburger_menu {
+    height: 38px;
+    width: 48px;
+  }
+
+  #hamburger_menu span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #7f5539;
+    transition: linear 400ms;
+  }
+
+  #hamburger_menu .top_change {
+    transform: rotate(40deg);
+    transform-origin: left;
+  }
+
+  #hamburger_menu .center_change {
+    opacity: 0;
+  }
+
+  #hamburger_menu .bottom_change {
+    transform: rotate(-40deg);
+    transform-origin: left;
+  }
+
+  /* ハンバーガーメニュー↑ */
+
+  /* ドロワーメニュー↓ */
+  .drawer_design {
+    width: 600px;
+  }
+
+  .drawer_logo img {
+    height: 77.77px;
+  }
+
+  .drawer_close_button {
+    height: 53.93px;
+    width: 54px;
+    z-index: 30;
+  }
+
+  .nav_menu li {
+    padding: 20px 12px;
+    color: #fff;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  /* ドロワーメニュー↑ */
+
+  h1 img {
+    height: 67px;
+  }
+
+  .login_nav {
+    gap: 32px;
+  }
+
+  .login_nav a img {
+    height: 40px;
+    margin-bottom: 8px;
+  }
+
+  .login_nav a p {
+    font-size: 12px;
+  }
+
+  .search_design {
+    background-color: #b392ac;
+  }
+
+  #search_area {
+    height: 64px;
+    padding: 12px 12.5px;
+    margin: 0 auto;
+    width: 1200px;
+    max-width: 100%;
+    justify-content: flex-start;
+  }
+
+  .search_keyword {
+    width: 26.66%;
+  }
+
+  .search_submit {
+    background-size: 24px;
+  }
+
+
+  /* 共通footer領域↓ */
+  footer {
+    height: 450px;
+    padding: 12px 0 0;
+  }
+
+  .footer_design {
+    margin: 0 auto;
+    padding: 0 12px;
+    width: 1200px;
+    max-width: 100%;
+  }
+
+  #footer_nav {
+    margin-bottom: 40px;
+    width: 510px;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #footer_nav p {
+    margin-bottom: 0;
+    padding: 12px;
+  }
+
+  #sns_area {
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #sns_area a img {
+    width: 64px;
+  }
+
+  #footer_logo_area {
+    text-align: center;
+  }
+
+  #footer_logo_area a img {
+    margin-top: 60px;
+    width: 140px;
+  }
+
+  small {
+    margin-top: 40px;
+    font-size: 12px;
+  }
+}
